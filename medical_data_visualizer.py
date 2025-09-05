@@ -4,10 +4,19 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # 1
-df = None
+df = pd.read_csv('medical_examination.csv')
 
 # 2
-df['overweight'] = None
+
+overweight_list = []
+bmi = df['weight']/((df['height']/100)**2)
+for i in bmi:
+    if i > 25:
+        overweight_list.append(1) #overweight
+    else:
+        overweight_list.append(0) #not overweight
+
+df['overweight'] = overweight_list
 
 # 3
 
