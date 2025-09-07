@@ -41,9 +41,9 @@ def draw_cat_plot():
     # Function melt() helps to mold the data into a more useful form, it reshapes data from a wide format to a long format
 
     # 6
-    df_cat = None
-    
+    df_cat = df_cat.value_counts(['cardio', 'feature', 'value']).reset_index(name='total') # I'm counting how many times each combination of (cardio, feature, value) occurs when using the "value_counts()" and then adding a new column named "total" to receive this new data
 
+   
     # 7
 
 
