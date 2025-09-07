@@ -45,17 +45,20 @@ def draw_cat_plot():
 
    
     # 7
-
-
+    catplot = sns.catplot(data=df_cat, #dataframe used to plot the chart
+                            x='feature', # axis x
+                            y='total',  # axis y
+                            col='cardio', # title of the chart
+                            kind='bar', # Type of chart
+                            hue='value', # two bars will be created for each variable
+                            hue_order=[0, 1]) # set a color to represent "0" and "1"
 
     # 8
-    fig = None
-
+    fig = catplot.fig
 
     # 9
     fig.savefig('catplot.png')
     return fig
-
 
 # 10
 def draw_heat_map():

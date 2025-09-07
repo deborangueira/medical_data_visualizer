@@ -22,4 +22,6 @@ https://annyme.medium.com/a-beginners-guide-to-numpy-apply-along-axis-lambda-133
 https://medium.com/@whyamit101/what-is-pandas-melt-and-why-is-it-useful-90ea8797028a\
 https://stellaspace.medium.com/transform-your-data-how-pd-melt-revolutionizes-compositional-data-analysis-for-data-engineers-289e55fc2421
 
-### Part
+### Part 7
+**sns.catplot()**\
+https://medium.com/@RobuRishabh/seaborn-a-comprehensive-guide-to-statistical-data-visualization-in-python-60f0d7c1de33 
