@@ -33,8 +33,14 @@ df['gluc'] = df['gluc'].apply(lambda x:0 if x ==1 else 1)
 # 4
 def draw_cat_plot():
     # 5
-    df_cat = None
+    df_cat = df.melt(id_vars=['cardio'], # Columns to keep 
+                    value_vars = ['cholesterol', 'gluc', 'smoke', 'alco', 'active', 'overweight'], # Columns to melt
+                    var_name = 'health factor', # name of the new column that stores all the variables the were melted
+                    value_name='value') # name of the new column that stores the values
 
+    # Function melt() helps to mold the data into a more useful form, it reshapes data from a wide format to a long format
+
+    print(df_cat)
 
     # 6
     df_cat = None
