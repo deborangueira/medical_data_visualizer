@@ -8,7 +8,7 @@ df = pd.read_csv('medical_examination.csv')
 
 # 2
 
-overweight_list = [] # Create an empty List that will receive all the values related to overweight
+overweight_list = [] # Create an empty List that will receive all the binary values related to overweight
 
 bmi = df['weight']/((df['height']/100)**2) # calculus of ibm and adjustment of unit of measure for height
 
@@ -21,6 +21,13 @@ for i in bmi: # Since ibm returns a list with index and value, now I do an itera
 df['overweight'] = overweight_list # finally, I add a new column by: declaring a new column name with the binary list: overweight_list
 
 # 3
+
+df['cholesterol'] = df['cholesterol'].apply(lambda x:0 if x ==1 else 1)
+df['gluc'] = df['gluc'].apply(lambda x:0 if x ==1 else 1)
+
+# Beforehand I duble-checked the datatype of those two columns using "print(df.dtypes)", and saw that they were intergers. 
+# Then in the argument (left side, before the =) I defined the column that will be overwritten
+# In the expression (right side, after the =), I defined the column that has the values that interest me, then I used apply() which allows me to pass a function (in this case lambda) and run it to every single cell
 
 
 # 4
