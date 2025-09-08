@@ -1,3 +1,5 @@
+# Professora, adiciono abaixo o link para segundo projeto do curso. Me descuidei e esqueci de adiciona-lo ao card do Adalove, mas o coloco aqui caso seja possível considera-lo para avaliação:https://github.com/deborangueira/page_view_time_series_visualizer/blob/main/time_serires_visualizer.py 
+
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
