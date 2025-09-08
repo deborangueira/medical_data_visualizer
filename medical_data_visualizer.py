@@ -34,7 +34,7 @@ df['gluc'] = df['gluc'].apply(lambda x:0 if x ==1 else 1)
 def draw_cat_plot():
     # 5
     df_cat = df.melt(id_vars=['cardio'], # Columns to keep 
-                    value_vars = ['cholesterol', 'gluc', 'smoke', 'alco', 'active', 'overweight'], # Columns to melt
+                    value_vars = ['cholesterol', 'gluc', 'smoke', 'alco', 'active', 'overweight'], # Columns to melt (I will be referring to them as features from now on)
                     var_name = 'feature', # name of the new column that stores all the variables the were melted
                     value_name='value') # name of the new column that stores the values of each variable
 
@@ -63,7 +63,15 @@ def draw_cat_plot():
 # 10
 def draw_heat_map():
     # 11
-    df_heat = None
+    df_heat = df[# I'm creating a new dataframe by filtering data of df based on the following criteria:       
+        (df['ap_lo'] <= df['ap_hi']) &  # diastolic pressure is lower than systolic
+        # Removing outliers of height and weight by using quantile (a method that returns the values that are in the interval you defined)
+        
+        (df['height'] >= df['height'].quantile(0.025)) & # 2,5% -> very close to the left tail of the distribution 
+        (df['height'] <= df['height'].quantile(0.975)) & # 97,5 -> very close to the right tail of the distribuition
+
+        (df['weight'] >= df['weight'].quantile(0.025)) &
+        (df['weight'] <= df['weight'].quantile(0.975))]
 
     # 12
     corr = None

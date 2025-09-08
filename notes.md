@@ -24,4 +24,5 @@ https://stellaspace.medium.com/transform-your-data-how-pd-melt-revolutionizes-co
 
 ### Part 7
 **sns.catplot()**\
-https://medium.com/@RobuRishabh/seaborn-a-comprehensive-guide-to-statistical-data-visualization-in-python-60f0d7c1de33 
+https://medium.com/@RobuRishabh/seaborn-a-comprehensive-guide-to-statistical-data-visualization-in-python-60f0d7c1de33
+
