@@ -74,19 +74,28 @@ def draw_heat_map():
         (df['weight'] <= df['weight'].quantile(0.975))]
 
     # 12
-    corr = None
+    corr = df_heat.corr() #correlation matrix
 
     # 13
-    mask = None
-
-
+    mask = np.triu(corr) # mask for the upper triangle
 
     # 14
-    fig, ax = None
+    fig, ax = plt.subplots() # matplotlib figure
 
     # 15
+    sns.heatmap(data=corr, #dataset to visualize (must be in a matrix form)
 
+                annot=True, # displays the value in each cell
+                fmt=".1f", # controls how numbers are shown: ".1f" means 1 decimal
+                annot_kws={'fontsize':6}, # controls the font size of numbers
 
+                linewidth=.5, # width of the lines that will divide each cell
+                mask=mask, # hides the upper triangle
+                square=False, # heatmap cells are not square-shaped and rectangular cells are allowed
+
+                cbar_kws={"shrink": .7}, # arguments to customize the colorbar. In this case, it will look smaller compared to the heatmap.
+                center=0, # set the value at which to center the colormap
+                vmax=0.30); # data range that the colormap covers: it sets the maximum value of the color scale and any values ≥ 0.30 will have the same strongest color.
 
     # 16
     fig.savefig('heatmap.png')

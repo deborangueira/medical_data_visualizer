@@ -26,3 +26,7 @@ https://stellaspace.medium.com/transform-your-data-how-pd-melt-revolutionizes-co
 **sns.catplot()**\
 https://medium.com/@RobuRishabh/seaborn-a-comprehensive-guide-to-statistical-data-visualization-in-python-60f0d7c1de33
 
+### Part 15
+**heatmap**\
+https://seaborn.pydata.org/generated/seaborn.heatmap.html\
+https://medium.com/@1zeyneper/data-visualization-with-seaborn-heatmaps-58abfadd79d5
